@@ -1,0 +1,112 @@
+/* ===== Code Editor ===== */
+.code-editor {
+  background: #1e1e2e;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2a2a4a;
+  margin: 20px 0;
+}
+
+.code-editor-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #161625;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.code-editor-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.code-editor-dot--red { background: #ff5f57; }
+.code-editor-dot--yellow { background: #febc2e; }
+.code-editor-dot--green { background: #28c840; }
+
+.code-editor-label {
+  color: #8888aa;
+  font-size: 13px;
+  margin-left: 8px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.code-editor-run {
+  margin-left: auto;
+  background: linear-gradient(135deg, #6c63ff, #5a4fff);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.code-editor-run:hover {
+  background: linear-gradient(135deg, #7c73ff, #6a5fff);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+.code-editor-body {
+  display: flex;
+  min-height: 160px;
+  max-height: 400px;
+}
+
+.code-editor-lines {
+  padding: 14px 0;
+  background: #16162a;
+  min-width: 44px;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid #2a2a4a;
+}
+
+.code-editor-line-num {
+  padding: 0 10px 0 10px;
+  font-size: 13px;
+  line-height: 22px;
+  color: #4a4a6a;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.code-editor-textarea {
+  flex: 1;
+  background: transparent;
+  color: #d4d4ff;
+  border: none;
+  outline: none;
+  padding: 14px;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  resize: none;
+  tab-size: 2;
+  overflow-y: auto;
+  white-space: pre;
+}
+
+.code-editor-textarea::placeholder {
+  color: #3a3a5a;
+}
+
+.code-editor-footer {
+  display: flex;
+  gap: 16px;
+  padding: 8px 14px;
+  background: #161625;
+  border-top: 1px solid #2a2a4a;
+}
+
+.code-editor-hint {
+  color: #555577;
+  font-size: 12px;
+}
