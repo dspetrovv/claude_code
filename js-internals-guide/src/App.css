@@ -1,42 +1,95 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* ===== App Layout ===== */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main-content {
+  margin-left: 280px;
+  flex: 1;
+  padding: 40px 48px 80px;
+  max-width: 900px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ===== Page Hero ===== */
+.page-hero {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.page-hero-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  background: linear-gradient(135deg, #6c63ff 0%, #4fc3f7 50%, #66bb6a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.page-hero-sub {
+  color: #8888aa;
+  font-size: 17px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===== Preset Explanation ===== */
+.preset-explanation {
+  background: #16162a;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.preset-explanation h4 {
+  color: #e0e0ff;
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+
+.preset-explanation-text {
+  color: #b0b0cc;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-line;
+  margin: 0 0 16px 0;
+}
+
+.preset-expected {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #2a2a4a;
+  color: #b0b0cc;
+  font-size: 14px;
+}
+
+.preset-expected-output {
+  background: #0d0d1a;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 13px;
+  color: #66bb6a;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 900px) {
+  .app-layout {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-content {
+    margin-left: 0;
+    padding: 24px 16px 60px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .page-hero-title {
+    font-size: 26px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
